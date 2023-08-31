@@ -35,7 +35,8 @@ jobs:
           commit-message: github actions test01 ${{ github.actor }} 
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          branch-suffix: github-actions-test
+          branch: github-actions-test
+          branch-suffix: short-commit-hash
           base: main
           labels: githubactionsbot
           assignees: liukai0219
