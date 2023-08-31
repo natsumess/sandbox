@@ -25,17 +25,23 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - run: echo "hello!" >> README.md
-      - run: cat README.md
+      - run: |
+          cat README.md
+          echo "abc" >> test.txt
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: Update report
+          commit-message: github actions test01 ${{ github.actor }} 
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          branch: example-patches
+          branch-suffix: github-actions-test
+          base: main
+          labels: githubactionsbot
+          assignees: liukai0219
           reviewers: liukai0219
-          title: '[Example] Update report'
+          draft: true
+          title: 'github actions test01'
           body: |
             Update report
             - Updated with *today's* date
