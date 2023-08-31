@@ -39,8 +39,8 @@ jobs:
           branch-suffix: short-commit-hash
           base: main
           labels: githubactionsbot
-          assignees: liukai0219
-          reviewers: liukai0219
+          assignees: ${{ github.actor }}
+          reviewers: ${{ github.actor }}
           draft: true
           title: 'github actions test01'
           body: |
