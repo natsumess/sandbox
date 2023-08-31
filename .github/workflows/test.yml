@@ -34,6 +34,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: github actions test01 ${{ github.actor }} 
           committer: GitHub <noreply@github.com>
+          path: "*.md"
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           branch: github-actions-test
           branch-suffix: short-commit-hash
